@@ -31,19 +31,12 @@ public class MainActivity extends AppCompatActivity {
         rightAns4=findViewById(R.id.right4);
         rightAns5=findViewById(R.id.right5);
         e6=findViewById(R.id.edit6);
-
         rightAns5_5=findViewById(R.id.right55);
         wrongAns5=findViewById(R.id.wrong5);
-
         group1=findViewById(R.id.radio1);
         group2=findViewById(R.id.radio2);
         group3=findViewById(R.id.radio3);
         group4=findViewById(R.id.radio4);
-
-
-
-
-
     }
 
     public void CheckAns1(){
@@ -123,10 +116,6 @@ public class MainActivity extends AppCompatActivity {
           if (wrongAns5.isChecked()) {
               wrongAns5.toggle();
           }
-
-
-
-
       }
 
     public  void  Submit(View v){
