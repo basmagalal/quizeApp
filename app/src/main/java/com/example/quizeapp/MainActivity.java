@@ -68,24 +68,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void CheckAns6(){
-        String ans= e6.getText().toString();
-        int res =Integer.parseInt(ans);
+         String ans = e6.getText().toString();
+        int res ;
 
+        try {
+            res = Integer.parseInt(ans);
+            if (res==84)
+                total++;
+        }
+         catch(NumberFormatException ex) {
+             Toast toast = Toast.makeText(getApplicationContext(),
+                     "Plz enter the answer " ,
+                     Toast.LENGTH_SHORT);
 
-       if (ans.isEmpty()) {
-           Toast toast = Toast.makeText(getApplicationContext(),
-                   "plz Enter the answer",
-                   Toast.LENGTH_SHORT);
-
-           toast.show();
-
-       }
-       else {
-
-           if (res == 84)
-               total++;
-
-       }
+             toast.show();
+             return;
+        }
     }
 
     public void ALL(){
